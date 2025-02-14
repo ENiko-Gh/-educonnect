@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #282c34;
+  --highlight-color: #61dafb;
+  --button-color: #f8a11e;
+  --button-hover-color: #f08400;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,14 +32,21 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--highlight-color);
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-image: url('/fond/rso1.png');
+  background-size: cover;
+  background-position: center;
 }

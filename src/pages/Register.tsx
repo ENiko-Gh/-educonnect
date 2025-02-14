@@ -1,3 +1,4 @@
+// Register.tsx
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button, Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
@@ -52,11 +53,20 @@ const Register: React.FC = () => {
 
     return (
         <Container maxWidth="sm">
-            <Box sx={{ marginTop: 8, textAlign: 'center' }}>
+            <Box
+                sx={{
+                    marginTop: 8,
+                    textAlign: 'center',
+                    backgroundColor: '#f7f9fb', // Fondo suave
+                    padding: 4,
+                    borderRadius: 4, // Bordes redondeados
+                    boxShadow: 3, // Sombra sutil
+                }}
+            >
                 <Typography variant="h4" gutterBottom>
                     Registro
                 </Typography>
-                {error && <Typography color="error">{error}</Typography>}
+                {error && <Typography color="error" sx={{ marginBottom: 2 }}>{error}</Typography>}
                 <form onSubmit={handleSubmit}>
                     <TextField
                         label="Nombre"
@@ -65,6 +75,10 @@ const Register: React.FC = () => {
                         margin="normal"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        sx={{
+                            backgroundColor: '#fff',
+                            borderRadius: 2,
+                        }}
                     />
                     <TextField
                         label="Correo electrónico"
@@ -74,6 +88,10 @@ const Register: React.FC = () => {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        sx={{
+                            backgroundColor: '#fff',
+                            borderRadius: 2,
+                        }}
                     />
                     <TextField
                         label="Contraseña"
@@ -83,6 +101,10 @@ const Register: React.FC = () => {
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        sx={{
+                            backgroundColor: '#fff',
+                            borderRadius: 2,
+                        }}
                     />
                     <Button
                         type="submit"
@@ -90,7 +112,11 @@ const Register: React.FC = () => {
                         color="primary"
                         fullWidth
                         size="large"
-                        sx={{ marginTop: 2 }}
+                        sx={{
+                            marginTop: 2,
+                            padding: '12px',
+                            borderRadius: 2,
+                        }}
                     >
                         Registrarse
                     </Button>

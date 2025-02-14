@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import { AppBar, Toolbar, Button, Container, Typography } from '@mui/material';
+import NotificacionesPage from './pages/NotificacionesPage';
 // Importación de los componentes faltantes
 import Forum from './pages/Forum';
 import Resources from './pages/Resources';
@@ -14,17 +15,29 @@ const Register = lazy(() => import('./pages/Register'));
 const Login = lazy(() => import('./pages/Login'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Chat = lazy(() => import('./pages/Chat'));
+const AcercaDeNosotros = lazy(() => import('./pages/AcercaDeNosotros'));
+const AdminActions = lazy(() => import('./pages/AdminActions')); // Importa el componente AdminActions
 
 // Función para obtener el usuario autenticado desde localStorage
 const getUserFromLocalStorage = () => {
   try {
     const user = localStorage.getItem('user');
-    // Comprobar si el valor no es null antes de parsearlo
     return user ? JSON.parse(user) : null;
   } catch (error) {
     console.error('Error al recuperar el usuario:', error);
     return null;
   }
+};
+
+// Funciones para eliminar y editar publicaciones (ejemplo)
+const eliminarPublicacion = (id: number) => {
+  console.log(`Publicación eliminada: ${id}`);
+  // Aquí iría la lógica para eliminar la publicación
+};
+
+const editarPublicacion = (id: number) => {
+  console.log(`Publicación editada: ${id}`);
+  // Aquí iría la lógica para editar la publicación
 };
 
 // Componente Header
@@ -49,7 +62,7 @@ const Header: React.FC = () => {
         <Button color="inherit" component={Link} to="/">
           Inicio
         </Button>
-        <Button color="inherit" component={Link} to="/about">
+        <Button color="inherit" component={Link} to="/acerca-de-nosotros">
           Acerca de
         </Button>
         <Button color="inherit" component={Link} to="/posts">
@@ -105,20 +118,22 @@ const App: React.FC = () => {
           <Routes>
             {/* Rutas principales */}
             <Route path="/" element={<Home />} />
+            <Route path="/acerca-de-nosotros" element={<AcercaDeNosotros />} />
             <Route path="/about" element={<About />} />
             <Route path="/posts" element={<Posts />} />
-            <Route path="/forum" element={<Forum />} /> {/* Foro importado */}
-
-            {/* Rutas de administración y autenticación */}
-            <Route path="/admin" element={<ProtectedRoute element={<Admin />} />} />
+            <Route path="/forum" element={<Forum />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/resources" element={<Resources />} /> {/* Resources importado */}
-
-            {/* Ruta del chat */}
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/notificaciones" element={<NotificacionesPage />} />
             <Route path="/chat" element={<Chat />} />
-
-            {/* Ruta para páginas no encontradas */}
+            <Route path="/admin" element={<ProtectedRoute element={<Admin />} />} />
+            <Route
+              path="/admin-actions"
+              element={
+                <ProtectedRoute element={<AdminActions pubId={1} eliminarPublicacion={eliminarPublicacion} editarPublicacion={editarPublicacion} />} />
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Container>

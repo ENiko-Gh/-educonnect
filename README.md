@@ -1,46 +1,207 @@
-# Getting Started with Create React App
+![logo](public/images/espe.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ESPE
 
-## Available Scripts
+## Estudiante
+### Edison Nicolas Guamialama Haro
 
-In the project directory, you can run:
+## Docente
+### Ing. Angel Codco
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Actividad de aprendizaje n.° 2
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# EduConnect
 
-### `npm test`
+EduConnect es una aplicación web desarrollada con **React** y **TypeScript** que permite gestionar la educación de manera eficiente, proporcionando herramientas para estudiantes, profesores y administradores.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📌 Características
 
-### `npm run build`
+- Gestión de usuarios (estudiantes, profesores, administradores).
+- Interfaz moderna y accesible.
+- Soporte para formularios y validación de datos.
+- Implementación de buenas prácticas con TypeScript.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📋 Requisitos Previos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Antes de instalar el proyecto, nos asegúramos de tener los siguientes requisitos en nuestro sistema:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js](https://nodejs.org/) (versión 16 o superior)
+- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
+- Un editor de código como [VS Code](https://code.visualstudio.com/)
 
-### `npm run eject`
+## 🔧 Instalación
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clona el repositorio:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```sh
+   git clone https://github.com/ENiko-Gh/-educonnect.git
+   cd educonnect
+Instala las dependencias:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+npm install
+Inicia el servidor de desarrollo:
 
-## Learn More
+npm start
+Accede a la aplicación:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Abre tu navegador en http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🚀 Construcción y Despliegue
+Para generar una versión optimizada del proyecto, ejecutamos:
+
+npm run build
+Esto generará una carpeta build/ lista para producción.
+
+❓ Solución de Problemas
+Si tienes problemas con dependencias o paquetes, intenta los siguientes comandos:     
+
+rm -rf node_modules package-lock.json
+npm install
+Si el problema persiste, revisa la documentación oficial de React y TypeScript.       
+
+🛠 Tecnologías Utilizadas
+React 19.0
+TypeScript 5.7
+React Router para navegación
+CSS Modules / Tailwind CSS para estilos
+
+
+### DESARROLLO  Y VISUALIZACION DEL PROYECTO "EDUCONNECT"
+
+
+luego del detalle de la instalacion  prosedemos a implementar las carpetas  en funcion de una estructura  previamente analizada
+
+al inicio empeso de esta manera  el desarrollo de la actividad
+
+![not](public/images/Desarrollo.jpg)
+
+
+Esta apliccion cuenta en el header con un menu de navegacion consta de inicio , Acerca de, Publicaciones, Chat, iniciar secion
+registrarce
+
+en la pagina de inicio
+![inicio](public/images/inicio1.jpg)
+
+contiene un sistema da notificacion  que cuando existe alguna noticiacin  externa o intenrna al sistema
+se visualiza  (Iienes un nuevo mensaje ) en el mismo espacio de visualizacion  se visualiza el mensaje de
+publicaciones realizada  dispone de un enlace a las notificaciones   y otro  que podemos Eliminar   o limpiar las notificaciones
+
+![notifi](public/images/Inicio.jpg)
+
+![visualnotif](images/Notifi2.jpg)
+mensaje de bienveida  con una pequeña descripcion y la invitacion a formar parte de nuestro sistema
+al dar click en "VER PUBLICACIONES" redirige a las publicaciones
+
+```tsx
+ const handleNotificationClick = () => {
+        const nuevosMensajes = [
+            'Nuevo comentario en tu publicación',
+            'Un usuario respondió tu mensaje',
+            'Tienes una nueva solicitud de amistad'
+        ];
+        const mensajeAleatorio = nuevosMensajes[Math.floor(Math.random() * nuevosMensajes.length)];
+        setNotifications((prev) => [...prev, mensajeAleatorio]);
+
+        // Redirige a la página de notificaciones
+        navigate('/notificaciones')
+    };
+```
+
+
+mensaje de bienveida  con una pequeña descripcion y la invitacion a formar parte de nuestro sistema
+al dar click en "VER PUBLICACIONES" redirige a las publicaciones
+
+![not](public/images/publi2.jpg)
+
+vemos que existe tres publicaciones   esta  publicaciones el administrados  previa a una clave
+
+![not](public/images/clavAdmin.jpg)
+
+ingresada la  clave " Admin123"  se  redirige a un Modal de el formualrio conde el administrador puede  editar o eliminar estos mensajes e para evitas que los mensajes sean ofencivos o no esten acordes a las politicaas del foro
+
+![not](public/images/Administrador.jpg)
+
+desde est fromulario tambien puede el administrador realizar publicaciones es para mas poner tematica para debate o foros
+
+Pagina de Acerca de nosotros
+
+es donde mas se destaca el ser de la pagina y su objetico
+
+![not](public/images/AcerNostrs.jpg)
+
+en la parte inferior al dar click en el boton de !uneta a Nosotros!  le redirige a la pagina de publicaciones y posterior ala paguina de Registrarce
+en la pagina de registrarte existe un formulario donde solcitara  campos obligatorios 
+
+
+![not](public/images/Register.jpg)
+
+este formulario si no es los campos completos no le deja abansar observando una notificacion al dar click en registrarse estos datos se almacenas el el localstorage  y se redirige  a la paguina de inicio de secion aqui se verifica  que el nuevo usaurio est registrado al momento de poner alguna contrasenia o usuaro erroneo le nitifica
+
+![not](public/images/modal2.jpg)
+
+
+al ingresar las credenciales correctas  de abre el formulario de publicaciones  donde se puede publicar nuevos articulos
+
+el plus de esta pagina es el chat en en tiempo real
+esta pagina es con conexion externa para interactuar con estudiantes de la misma univesidad y otras univesidades esta sela realizo con una plataforma externa me detendre un poco mas para explicar
+
+![not](public/images/chat.jpg)
+Para evitar que los publicadores accedan a secciones de admin, se crea un componente de protección en ProtectedRoute.tsx
+
+```tsx
+import { Navigate } from 'react-router-dom';
+
+const ProtectedRoute = ({ user, role, requiredRole, children }: { user: any, role: string | null, requiredRole: string, children: JSX.Element }) => {
+    if (!user || role !== requiredRole) {
+        return <Navigate to="/" />;
+    }
+    return children;
+};
+
+```
+
+Usamos initializeApp(firebaseConfig) para inicializar Firebase
+Se utilizó DocumentData de Firestore para manejar los datos de los mensajes
+Optimización de Dependencias en useEffect
+Funciona con Firebase 9+ (nuevo SDK modular)
+En el archivo Register.tsx, al registrar un usuario, guardaremos su rol en Firestore: 
+
+``` tsx
+import { auth, db } from '../utils/firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { doc, setDoc } from 'firebase/firestore';
+
+const registerUser = async (email: string, password: string, name: string) => {       
+    try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+
+        // Guardar en Firestore con el rol "publicador" por defecto
+        await setDoc(doc(db, 'users', user.email!), {
+            name,
+            email: user.email,
+            role: 'publicador' // Por defecto es publicador, luego un admin puede cambiarlo
+        });
+
+        console.log('Usuario registrado correctamente.');
+    } catch (error) {
+        console.error('Error al registrar usuario:', error);
+    }
+};
+
+```
+
+✅ Usuarios Publicadores:
+✔️ Pueden ver publicaciones, hacer comentarios y participar en el chat.
+
+✅ Usuarios Administradores:
+✔️ Pueden eliminar publicaciones, comentarios y gestionar usuarios.
+
+✅ Navegación Segura:
+✔️ Un publicador NO puede acceder al panel de admin
+
+
+![not](public/images/firebase.jpg)

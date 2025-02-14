@@ -1,0 +1,76 @@
+.acerca-de-nosotros {
+    background-image: url('https://images.unsplash.com/photo-1563201538-01d8e1cfc0e9');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+.contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo oscuro para mejor legibilidad */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.informacion {
+    margin-top: 20px;
+}
+
+.informacion h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.misison-vision h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.misison-vision p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.misison-vision ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.boton-registrarse {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.boton-registrarse button {
+    background-color: #f8a11e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.boton-registrarse button:hover {
+    background-color: #f08400;
+}
+
+/* Ajuste específico para la imagen del logo */
+.imagen-grupo img {
+    width: 150px;
+    /* Ancho fijo para el logo */
+    height: auto;
+    /* Mantiene las proporciones de la imagen */
+    display: block;
+    margin: 0 auto;
+    /* Centra la imagen */
+}

@@ -1,5 +1,5 @@
 
-![logo](/images/espe.jpg)
+![logo](public/images/espe.jpg)
 
 # ESPE
 
@@ -77,22 +77,22 @@ luego del detalle de la instalacion  prosedemos a implementar las carpetas  en f
 
 al inicio empeso de esta manera  el desarrollo de la actividad 
 
-![not](images/Desarrollo.jpg)
+![not](public/images/images/Desarrollo.jpg)
 
 
 Esta apliccion cuenta en el header con un menu de navegacion consta de inicio , Acerca de, Publicaciones, Chat, iniciar secion
 registrarce 
 
 en la pagina de inicio
-![inicio](images/inicio1.jpg)
+![inicio](public/images/inicio1.jpg)
 
 contiene un sistema da notificacion  que cuando existe alguna noticiacin  externa o intenrna al sistema 
 se visualiza  (Iienes un nuevo mensaje ) en el mismo espacio de visualizacion  se visualiza el mensaje de 
 publicaciones realizada  dispone de un enlace a las notificaciones   y otro  que podemos Eliminar   o limpiar las notificaciones 
 
-![notifi](images/Inicio.jpg)
+![notifi](public/images/Inicio.jpg)
 
-![visualnotif](images/Notifi2.jpg)
+![visualnotif](public/images/Notifi2.jpg)
 mensaje de bienveida  con una pequeña descripcion y la invitacion a formar parte de nuestro sistema 
 al dar click en "VER PUBLICACIONES" redirige a las publicaciones  
 
@@ -115,15 +115,15 @@ al dar click en "VER PUBLICACIONES" redirige a las publicaciones
 mensaje de bienveida  con una pequeña descripcion y la invitacion a formar parte de nuestro sistema 
 al dar click en "VER PUBLICACIONES" redirige a las publicaciones  
 
-![not](images/publi2.jpg)
+![not](public/images/publi2.jpg)
 
 vemos que existe tres publicaciones   esta  publicaciones el administrados  previa a una clave 
 
-![not](images/clavAdmin.jpg)
+![not](public/images/clavAdmin.jpg)
 
 ingresada la  clave " Admin123"  se  redirige a un Modal de el formualrio conde el administrador puede  editar o eliminar estos mensajes e para evitas que los mensajes sean ofencivos o no esten acordes a las politicaas del foro
 
-![not](images/Administrador.jpg)
+![not](public//public/images/Administrador.jpg)
 
 desde est fromulario tambien puede el administrador realizar publicaciones es para mas poner tematica para debate o foros 
 
@@ -131,16 +131,16 @@ Pagina de Acerca de nosotros
 
 es donde mas se destaca el ser de la pagina y su objetico 
 
-![not](images/AcerNostrs.jpg)
+![not](public/images/AcerNostrs.jpg)
 
 en la parte inferior al dar click en el boton de !uneta a Nosotros!  le redirige a la pagina de publicaciones y posterior ala paguina de Registrarce 
 en la pagina de registrarte existe un formulario donde solcitara  campos obligatorios  
 
-![not](images/Register.jpg)
+![not](public/images/Register.jpg)
 
 este formulario si no es los campos completos no le deja abansar observando una notificacion al dar click en registrarse estos datos se almacenas el el localstorage  y se redirige  a la paguina de inicio de secion aqui se verifica  que el nuevo usaurio est registrado al momento de poner alguna contrasenia o usuaro erroneo le nitifica 
 
-![not](images/modal2.jpg)
+![not](public/images/modal2.jpg)
 
 
 al ingresar las credenciales correctas  de abre el formulario de publicaciones  donde se puede publicar nuevos articulos 
@@ -148,7 +148,7 @@ al ingresar las credenciales correctas  de abre el formulario de publicaciones  
 el plus de esta pagina es el chat en en tiempo real 
 esta pagina es con conexion externa para interactuar con estudiantes de la misma univesidad y otras univesidades esta sela realizo con una plataforma externa me detendre un poco mas para explicar
 
-![not](images/chat.jpg)
+![not](public/images/chat.jpg)
 Para evitar que los publicadores accedan a secciones de admin, se crea un componente de protección en ProtectedRoute.tsx
 
 ```tsx
@@ -204,5 +204,5 @@ const registerUser = async (email: string, password: string, name: string) => {
 ✔️ Un publicador NO puede acceder al panel de admin
 
 
-![not](images/firebase.jpg)
+![not](public/images/firebase.jpg)
 
